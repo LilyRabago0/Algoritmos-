@@ -1,1 +1,254 @@
+///////////////////////////////////////////////////////////////////////////////////////////
+
+//EXERCISE#1
+fuction exercise1(){
+
+/*Comparison
+Exercise #1. Create a function that takes in one number and checks if
+the number is greater than 10. Print out to the console true if it is
+greater and false otherwise.*/
+
+userNum = prompt('Write a number:');
+
+function greaterNumberthanTen(num) {
+
+if (num > 18) {
+    return "the number is greater than 10";
+}else{
+    return 'error!'
+}
+
+}
+
+console.log(greaterNumberthanTen(userNum));
+}
+
+alert(exercise1());
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+//EXERCISE#2
+fuction exercise2(){
+
+/*
+Exercise #2. Create a function that takes in one number and checks if
+it is divisible by 4 or divisible by 9. Print out to the console true
+if a number if divisible by 4 or 9, and false if a number is not
+divisible by either number.*/
+
+userNum = prompt('Write a number:')
+
+function divisibleNumbers(num){
+    if(num % 4 == 0 || num % 9 == 0) {
+        console.log(true);
+        console.log('it is divisible by 4 o divisible by 9');
+    } else {
+        console-log(false);
+    }
+}
+
+console.log(divisibleNumbers(userNum));
+
+alert(exercise2());
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+//EXERCISE#3
+fuction exercise3(){
+
+
+/* String Function
+
+Exercise #1. We want to check if a string is empty. If a string is not empty, we want to
+print out the first character of that string. If a string is empty, print out a text saying "This
+string is empty" .*/
+
+let tex = prompt("Tell me a word")
+function stringVacia (text) {
+
+      if(typeof tex == undefined || tex == ""  ){
+
+          alert("This string is empty");
+
+      }
+      else{
+          alert(text.charAt(0));
+      }
+}
+
+stringVacia(tex)
+};
+
+alert(exercise3());
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+//EXERCISE#4
+fuction exercise4(){
+
+/*User Input. Exercise #1. 
+Create a function that takes in 2 inputs (using prompt)
+and goes through the 5 arithmetic operators (+, -, /, *, %). The expected output on the
+console is:
+* `The sum is x` -> x is the calculated sum
+* `The subtraction is y` -> y is the calculated difference
+* `The multiplication is z` -> z is the calculated multiplication
+* `The division is w` -> w is the calculated division
+* `The remainder is q` -> q is the calculated remainder     */
+
+
+let n1 = parseInt(prompt("Intruduce el primer número"));
+let n2 = parseInt(prompt("Introduce el segundo número"));
+
+function calculadora(n1, n2){
+
+v1 = n1 + n2;
+v2 = n1 - n2;
+v3 = n1 * n2;
+v4 = n1 / n2;
+v5 = n1 % n2;
+
+
+//se escriben los resultados en consola
+
+alert("Los numeros son: "+n1+" y "+n2+"\nLa suma es "+v1+"\nLa resta es:" +v2+
+"\nLa multiplicación es:" +v3+ "\nLa división es:"+v4+"\nEl resto es:" +v5  );
+
+};
+
+alert(exercise4());
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+//EXERCISE#5
+
+fuction exercise5(){
+
+/*User Input.
+Exercise 2. We want to compare two strings and check if they are the same - case
+insensitive. Return a boolean - true if the two strings are the same, and false if they are
+not.*/
+
+let cad1 = prompt("Enter a string of characters");
+let cad2 = process("Enter a string of characters");
+
+function checkTwoStringsSame( string1, string2){
+
+   if(string1.toLowerCase()==string2.toLowerCase()){
+
+        alert("True, the two strings are the same");
+
+   }
+   else{
+       alert("False, the two strings are not the same");
+   }
+
+};
+
+checkTwoStringsSame(cad1, cad2);
+
+alert(exercise5());
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+//EXERCISE#6
+
+fuction exercise6(){
+
+/*PRACTICE. Part 1.
+• Open a repl.it Javascript page and call it Algorithms Introduction Exercise 1.
+• Write a program where a user enters the number of tasks they have completed.
+The program returns one of the following labels to the console:
+**Failed**
+**Insufficient**
+**Good**
+**Excellent**
+**Error**
+based on the conditions:
+• Failed if they scored 6 or less
+• Insufficient if they scored > 6 but less than 9 (9 included)
+• Good if they scored > 9 but less than 14 (14 included)
+• Excellent if they scored 15
+• Error if participants enter a negative number or a number outside the range
+supported (outside 0 - 15)*/
+
+
+let homework10 = parseInt(prompt("The number of tasks they have completed"));
+
+function homeworksDone() {
+    if (homework10 >= 0 && homework10 <= 6){
+        alert("Failed");
+    }
+    else if (homework10 >= 7 && homework10 <9){
+        alert("Insufficient");
+    }
+    else if (homework10 >=9 && homework10 <=14){
+        alert("Good");
+    }
+    else if(homework10 == 15){
+        alert("Excellent");
+    }
+    else{
+        alert("Error");
+    }
+}
+
+alert(homeworksDone());
+
+}
+
+alert(exercise6());
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+
+//EXERCISE#7
+
+fuction exercise7(){
+
+/* PRACTICE
+Part 2
+• Open a repl.it Javascript page and call it Algorithms Introduction Exercise 2.
+• Write an algorithm to find the largest among 5 different numbers entered by the
+user.
+• Print out the largest number to the console */
+
+
+//Se piden los datos
+let tareas = parseInt(prompt("Ingresa un número"));
+
+    function largestNumber(){
+        let mayor = 0;
+        
+        //Se crea un ciclo for de 5 repeticiones
+        for (var i= 0; i<5; i++){
+
+
+            //Se piden los datos
+            let n1 = parseInt(prompt("Ingresa número"));
+
+
+            //Se compara si el número ingresado es mayor
+            if(n1>mayor)
+            {
+                //Si es mayor, se guarda como el número mayor
+                mayor = n1;
+
+
+            }
+        }
+    }
+    
+    //Mensaje de número mayor
+    alert("el número mayor es" + mayor);
+    
+    
+
+
+
+
+
+
+
+
 

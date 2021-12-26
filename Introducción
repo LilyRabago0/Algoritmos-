@@ -1,7 +1,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 //EXERCISE#1
-fuction exercise1(){
+function exercise1(){
 
 /*Comparison
 Exercise #1. Create a function that takes in one number and checks if
@@ -28,7 +28,7 @@ alert(exercise1());
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 //EXERCISE#2
-fuction exercise2(){
+function exercise2(){
 
 /*
 Exercise #2. Create a function that takes in one number and checks if
@@ -48,13 +48,14 @@ function divisibleNumbers(num){
 }
 
 console.log(divisibleNumbers(userNum));
+}
 
 alert(exercise2());
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 //EXERCISE#3
-fuction exercise3(){
+function exercise3(){
 
 
 /* String Function
@@ -77,14 +78,14 @@ function stringVacia (text) {
 }
 
 stringVacia(tex)
-};
+}
 
 alert(exercise3());
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 //EXERCISE#4
-fuction exercise4(){
+function exercise4(){
 
 /*User Input. Exercise #1. 
 Create a function that takes in 2 inputs (using prompt)
@@ -114,7 +115,7 @@ v5 = n1 % n2;
 alert("Los numeros son: "+n1+" y "+n2+"\nLa suma es "+v1+"\nLa resta es:" +v2+
 "\nLa multiplicación es:" +v3+ "\nLa división es:"+v4+"\nEl resto es:" +v5  );
 
-};
+}}
 
 alert(exercise4());
 
@@ -122,7 +123,7 @@ alert(exercise4());
 
 //EXERCISE#5
 
-fuction exercise5(){
+function exercise5(){
 
 /*User Input.
 Exercise 2. We want to compare two strings and check if they are the same - case
@@ -143,9 +144,10 @@ function checkTwoStringsSame( string1, string2){
        alert("False, the two strings are not the same");
    }
 
-};
+}
 
 checkTwoStringsSame(cad1, cad2);
+}
 
 alert(exercise5());
 
@@ -153,7 +155,7 @@ alert(exercise5());
 
 //EXERCISE#6
 
-fuction exercise6(){
+function exercise6(){
 
 /*PRACTICE. Part 1.
 • Open a repl.it Javascript page and call it Algorithms Introduction Exercise 1.
@@ -204,7 +206,7 @@ alert(exercise6());
 
 //EXERCISE#7
 
-fuction exercise7(){
+function exercise7(){
 
 /* PRACTICE
 Part 2
@@ -214,33 +216,91 @@ user.
 • Print out the largest number to the console */
 
 
-//Se piden los datos
-let tareas = parseInt(prompt("Ingresa un número"));
+//Data is requested
+let homework = parseInt(prompt("Please enter a number"));
 
     function largestNumber(){
-        let mayor = 0;
+        let m = 0;
         
-        //Se crea un ciclo for de 5 repeticiones
+        //A for loop of 5 repetitions is created
         for (var i= 0; i<5; i++){
 
+            //Data is requested
+            let n1 = parseInt(prompt("Enter number"));
 
-            //Se piden los datos
-            let n1 = parseInt(prompt("Ingresa número"));
 
-
-            //Se compara si el número ingresado es mayor
-            if(n1>mayor)
+            //It is compared if the number entered is greater
+            if(n1>m)
             {
-                //Si es mayor, se guarda como el número mayor
-                mayor = n1;
-
+                //If it is greater, it is saved as the greater number
+                m = n1;
 
             }
         }
     }
     
-    //Mensaje de número mayor
-    alert("el número mayor es" + mayor);
+    //Message
+    alert("The greater number is" + m);
+}  
+    
+alert(exercise7());
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+//EXERCISE#8
+
+fuction exercise8(){
+
+/* PRACTICE. Part 3
+• Open a repl.it Javascript page and call it Algorithms Introduction Exercise 3.
+• We have 3 items and we know the price for each. However, we can only buy the
+two least expensive items.
+• Write an algorithm that takes in three user inputs and outputs the two smallest
+prices to the console */
+
+function lowestPrice(){
+
+    let mayor=0;
+    // variables are declared 
+    let products = [];
+    let prices = [];
+
+    //A for loop of 3 repetitions is created
+    for (var i = 0; i<3; i++ ){
+        //variables are declared 
+        let userList = prompt('Enter the products you want to buy: ');
+        let addPrice = prompt('Enter the prices: ');
+
+        //They are added with the JS push method
+        products.push(userList);
+        prices.push(parseInt(addPrice));
+    }
+    if (prices[0] < prices[1]){
+        if (prices[2] < prices[1]){ 
+        alert(`We are going to buy: ${products[0]} for ${prices[0]} and ${products[2]} for ${prices[2]}`);
+        } else {
+            alert(`We are going to buy ${products[0]} for ${prices[0]} and ${products[1]} for ${prices[1]}`);
+        }
+    } else {
+        alert('ERROR!');
+    }
+}
+    
+alert(lowestPrice());
+
+}
+
+alert(exercise8());
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
     
     
 
